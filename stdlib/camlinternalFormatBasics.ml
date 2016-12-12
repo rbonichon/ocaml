@@ -219,18 +219,18 @@ does assume that the two input have exactly the same term structure
 Format_subst_ty constructor).
 *)
 
-(* Type of a block used by the Format pretty-printer. *)
-type block_type =
-  | Pp_hbox   (* Horizontal block no line breaking *)
-  | Pp_vbox   (* Vertical block each break leads to a new line *)
-  | Pp_hvbox  (* Horizontal-vertical block: same as vbox, except if this block
+(* Type of a box used by the Format pretty-printer. *)
+type box_type =
+  | Pp_hbox   (* Horizontal box no line breaking *)
+  | Pp_vbox   (* Vertical box each break leads to a new line *)
+  | Pp_hvbox  (* Horizontal-vertical box: same as vbox, except if this box
                  is small enough to fit on a single line *)
-  | Pp_hovbox (* Horizontal or Vertical block: breaks lead to new line
-                 only when necessary to print the content of the block *)
-  | Pp_box    (* Horizontal or Indent block: breaks lead to new line
-                 only when necessary to print the content of the block, or
+  | Pp_hovbox (* Horizontal or Vertical box: breaks lead to new line
+                 only when necessary to print the content of the box *)
+  | Pp_box    (* Horizontal or Indent box: breaks lead to new line
+                 only when necessary to print the content of the box, or
                  when it leads to a new indentation of the current line *)
-  | Pp_fits   (* Internal usage: when a block fits on a single line *)
+  | Pp_fits   (* Internal usage: when a box fits on a single line *)
 
 (* Formatting element used by the Format pretty-printter. *)
 type formatting_lit =

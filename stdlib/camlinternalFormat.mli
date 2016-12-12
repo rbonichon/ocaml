@@ -99,7 +99,7 @@ val string_of_fmtty :
 val string_of_fmt :
   ('a, 'b, 'c, 'd, 'e, 'f) CamlinternalFormatBasics.fmt -> string
 
-val open_box_of_string : string -> int * block_type
+val open_box_of_string : string -> int * box_type
 
 val symm :
    ('a1, 'b1, 'c1, 'd1, 'e1, 'f1,

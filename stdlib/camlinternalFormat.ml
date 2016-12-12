@@ -1921,7 +1921,7 @@ let failwith_message (Format (fmt, _)) =
 (******************************************************************************)
                             (* Formatting tools *)
 
-(* Convert a string to an open block description (indent, block_type) *)
+(* Convert a string to an open block description (indent, box_type) *)
 let open_box_of_string str =
   if str = "" then (0, Pp_box) else
     let len = String.length str in

@@ -43,7 +43,7 @@ external int_of_size : size -> int = "%identity"
      (the box behaves as an horizontal or vertical box but break hints split
       the line if splitting would move to the left)
 *)
-type box_type = CamlinternalFormatBasics.block_type =
+type box_type = CamlinternalFormatBasics.box_type =
   | Pp_hbox | Pp_vbox | Pp_hvbox | Pp_hovbox | Pp_box | Pp_fits
 
 
